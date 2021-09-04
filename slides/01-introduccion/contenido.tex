@@ -54,7 +54,7 @@
     \item Descripción del problema (especificar lo que se pretende resolver).
     \item Análisis del problema (descripción de la funcionalidad del programa.
       Características, entradas y salidas, cálculos, tipos de datos,
-      restricciones, etc.
+      restricciones, etc.).
     \item Diseñar un algoritmo para el problema.
     \item Expresar el algoritmo como un programa (codificación del algoritmo
       diseñado en un lenguaje de programación).
@@ -73,8 +73,10 @@
 \begin{frame}[c]{Atreves de los años}
   \begin{description}
     \item[Años 30] Problemas computables y no computables.
+      \vspace{\baselineskip}
     \item[Años 50] Complejidad de los problemas computables (búsqueda de
       algoritmos más eficaces).
+      \vspace{\baselineskip}
     \item[Años 70] Clasificación de los problemas computables: \textbf{P}
       y \textbf{NP}
   \end{description}
@@ -85,6 +87,7 @@
     \item[Clase P] Problemas resolubles en un tiempo polinómico con una máquina
       de Turing determinística (esto es, el tiempo de ejecución del algoritmo en
       un ordenador viene descrito por una fórmula polinómica).
+      \vspace{\baselineskip}
     \item[Clase NP] \textbf{Non-Deterministic Polynomial-time} Problemas
       resolubles en tiempo polinómico con una máquina de Turing \textbf{no
       determinística}
@@ -102,6 +105,7 @@
     \item Si reducimos un problema (A) a otro (B), podemos obtener una solución
       con un algoritmo para el problema B y transformar esa solución para
       convertirla en una solución para el problema A.
+      \vspace{\baselineskip}
     \item \textbf{¿P = NP?} Si encontráramos un algoritmo polinómico para un
       problema \textit{NP-completo}, sabríamos que todos los problemas de clase
       NP se pueden resolver en tiempo polinómico.
@@ -110,32 +114,130 @@
 
 \section{Algorítmica}
 
-\begin{frame}[c]{Título}
-    \begin{center}
-        Texto
-    \end{center}
+\begin{frame}[c]{Algorítmica}
+  La algorítmica, como disciplina de estudio de los algoritmos, ha de
+  considerar:
+  \vspace{\baselineskip}
+  \begin{itemize}
+    \item El diseño de algoritmos.
+    \item La validación de algoritmos.
+    \item El análisis de algoritmos.
+  \end{itemize}
+\end{frame}
+
+\begin{frame}[c]{Diseño de algoritmos}
+  \begin{itemize}
+    \item Creación de algoritmos (parte creativa).
+      \vspace{\baselineskip}
+    \item El diseño de algoritmos no se puede dominar si no se conoce las
+      técnicas de diseño de algoritmos (métodos y heurísticas que han demostrado
+      ser útiles en la práctica).
+  \end{itemize}
+\end{frame}
+
+\begin{frame}[c]{Validación de algoritmos}
+  \begin{itemize}
+    \item Demostración de que las respuestas dadas por el algoritmo son correctas
+      para todas las posibles entradas.
+      \vspace{\baselineskip}
+    \item Único método válido: Demostración formal.
+  \end{itemize}
+\end{frame}
+
+\begin{frame}[c]{Análisis de algoritmos}
+  \begin{itemize}
+    \item Determinación de los recursos (espacio, tiempo) que consumen los
+      algoritmos en la resolución de problemas.
+      \vspace{\baselineskip}
+    \item El análisis de algoritmos permite comparar algoritmos alternativos
+      con criterios cuantitativos (y elegir el algoritmo más adecuado para
+      resolver un problema).
+  \end{itemize}
 \end{frame}
 
 \section{Análisis de la eficiencia de los algoritmos}
 
-\begin{frame}[c]{Título}
-    \begin{center}
-        Texto
-    \end{center}
-\end{frame}
+\begin{frame}[c]{Análisis de la eficiencia}
+  \begin{description}
+    \item[Problema] Determinar las características del algoritmo que sirvan para
+      evaluar su rendimiento.
+      \vspace{\baselineskip}
+      \begin{description}
+        \item[p.ej.] Tiempo requerido para la ejecución del algoritmo en términos del
+          número de veces que se ejecuta cada etapa del algoritmo.
+      \end{description}
+      \vspace{\baselineskip}
 
-\section{}
-
-\begin{frame}[c]{Título}
-    \begin{center}
-        Texto
-    \end{center}
+    \item[Alternativas] (complementarias):
+      \begin{itemize}
+        \item Enfoque empírico
+        \item Enfoque teórico
+        \item Enfoque híbrido
+      \end{itemize}
+  \end{description}
 \end{frame}
 
 \section{Técnicas de diseño de algoritmos}
 
-\begin{frame}[c]{Título}
-    \begin{center}
-        Texto
-    \end{center}
+\begin{frame}[c]{Técnicas de diseño}
+  Ejemplo: \textbf{Problema del viajante de comercio (TSP)}
+  \begin{center}
+    \includegraphics[scale=0.4]{01-tsp-01.png}
+  \end{center}
+\end{frame}
+
+\begin{frame}[c]{Problema de viajante de comercio (TSP)}
+  Si tenemos \textbf{N} ciudades e intentamos solucionar el problema por fuerza
+  bruta (comprobando todas las soluciones posibles), tendremos que comprobar
+  \textbf{N!} posibles soluciones.
+
+  \vspace{\baselineskip}
+  \begin{alertblock}{}
+    Se necesitan técnicas que nos permitan diseñar algoritmos eficientes.
+  \end{alertblock}
+\end{frame}
+
+\begin{frame}[c]{Problema de viajante de comercio (TSP)}
+  \begin{center}
+    \includegraphics[scale=0.4]{01-tsp-02.png}
+  \end{center}
+\end{frame}
+
+\begin{frame}[c]{Problema de viajante de comercio (TSP)}
+  \begin{center}
+    Solución aproximada con un algoritmo iterativo:
+    \vspace{\baselineskip}
+    \includegraphics[scale=0.4]{01-tsp-03.png}
+  \end{center}
+\end{frame}
+
+\begin{frame}[c]{Problema de viajante de comercio (TSP)}
+  \begin{center}
+    Solución aproximada con un algoritmo iterativo:
+    \vspace{\baselineskip}
+    \includegraphics[scale=0.4]{01-tsp-04.png}
+  \end{center}
+\end{frame}
+
+\begin{frame}[c]{Problema de viajante de comercio (TSP)}
+  \begin{center}
+    Solución aproximada con un algoritmo iterativo:
+    \vspace{\baselineskip}
+    \includegraphics[scale=0.4]{01-tsp-05.png}
+  \end{center}
+\end{frame}
+
+\begin{frame}[c]{Técnicas de diseño de algoritmos}
+  \begin{itemize}
+    \item Divide y vencerás
+    \item Algoritmos voraces ("\textit{greedy}")
+    \item Programación dinamica
+    \item Exploración de grafos
+      \begin{itemize}
+        \item Branch \& Bound (ramificación y poda)
+        \item Backtracking ("vuelta atrás")
+      \end{itemize}
+    \item Algoritmos probabilísticos
+    \item Meta heurísticas
+  \end{itemize}
 \end{frame}
