@@ -1,0 +1,57 @@
+% ex: ts=2 sw=2 sts=2 et filetype=tex
+% SPDX-License-Identifier: CC-BY-SA-4.0
+\documentclass[aspectratio=169]{beamer}
+
+\usetheme{Boadilla}
+
+\setbeamertemplate{navigation symbols}{} % To remove the navigation symbols from the bottom of all slides
+
+\graphicspath{{../img/}{../styles/tecmm/}}
+% use the command "usepackage" instead of "usecolortheme" to use the path to styles
+\usepackage{../styles/tecmm/beamercolorthemetecmm}
+
+\usepackage[utf8]{inputenc}
+\usepackage{graphicx} % Allows including images
+
+\title{Introducción a los Algoritmos}
+
+%\author[Miguel Bernal Marin]{\includegraphics[height=2.5cm]{tecmm-m-logo.png}\\ Miguel Bernal Marin} % Your name
+\author{Miguel Bernal Marin} % Your name
+\institute[TecMM Zapopan] % Your institution as it will appear on the bottom of every slide, may be shorthand to save space
+{
+ Instituto Tecnológico\\
+ José Mario Molina\\
+ Pasquel y Henríquez\\% Your institution for the title page
+\medskip
+\textit{miguel.bernal@zapopan.tecmm.edu.mx} % Your email address
+}
+\date{
+    \today
+} % Date, can be changed to a custom date
+
+\logo{\includegraphics[height=1.5cm]{tecmm-z-logo.png}}
+\newcommand{\nologo}{\setbeamertemplate{logo}{}} % command to set the logo to nothing
+
+%------------------------------------------------------------
+%The next block of commands puts the table of contents at the 
+%beginning of each section and highlights the current section:
+\AtBeginSection[]
+{
+  \begin{frame}
+    \frametitle{Contenido}
+    \tableofcontents[currentsection]
+  \end{frame}
+}
+%------------------------------------------------------------
+
+\begin{document}
+
+%%{\nologo
+\begin{frame}
+    \titlepage
+\end{frame}
+%%}
+
+\input{contenido.tex}
+
+\end{document}

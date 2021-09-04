@@ -1,4 +1,4 @@
-# Recursos para la materia de Algoritmos
+# Recursos para la materia de Análisis y Diseño de Algoritmos
 
 
 This work is licensed under a
