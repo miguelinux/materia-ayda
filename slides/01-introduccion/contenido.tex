@@ -68,12 +68,44 @@
   \end{center}
 \end{frame}
 
-\section{Clasificaicón de problemas}
+\section{Clasificación de problemas}
 
-\begin{frame}[c]{Título}
-    \begin{center}
-        Texto
-    \end{center}
+\begin{frame}[c]{Atreves de los años}
+  \begin{description}
+    \item[Años 30] Problemas computables y no computables.
+    \item[Años 50] Complejidad de los problemas computables (búsqueda de
+      algoritmos más eficaces).
+    \item[Años 70] Clasificación de los problemas computables: \textbf{P}
+      y \textbf{NP}
+  \end{description}
+\end{frame}
+
+\begin{frame}[c]{Clases P y NP}
+  \begin{description}
+    \item[Clase P] Problemas resolubles en un tiempo polinómico con una máquina
+      de Turing determinística (esto es, el tiempo de ejecución del algoritmo en
+      un ordenador viene descrito por una fórmula polinómica).
+    \item[Clase NP] \textbf{Non-Deterministic Polynomial-time} Problemas
+      resolubles en tiempo polinómico con una máquina de Turing \textbf{no
+      determinística}
+  \end{description}
+\end{frame}
+
+\begin{frame}[c]{Clase $P \subseteq $ Clase $ NP$}
+  \begin{center}
+    \includegraphics[scale=0.4]{01-problemas-np.png}
+  \end{center}
+\end{frame}
+
+\begin{frame}[c]{Reducción de problemas y complejidad}
+  \begin{itemize}
+    \item Si reducimos un problema (A) a otro (B), podemos obtener una solución
+      con un algoritmo para el problema B y transformar esa solución para
+      convertirla en una solución para el problema A.
+    \item \textbf{¿P = NP?} Si encontráramos un algoritmo polinómico para un
+      problema \textit{NP-completo}, sabríamos que todos los problemas de clase
+      NP se pueden resolver en tiempo polinómico.
+  \end{itemize}
 \end{frame}
 
 \section{Algorítmica}
