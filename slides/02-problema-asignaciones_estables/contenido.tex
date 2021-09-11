@@ -1,0 +1,93 @@
+% ex: ts=2 sw=2 sts=2 et filetype=tex
+% SPDX-License-Identifier: CC-BY-SA-4.0
+\begin{frame}
+    \frametitle{Contenido}
+    \tableofcontents
+\end{frame}
+
+\section{Problema}
+
+\begin{frame}[c]{Problema de asignaciones estables}
+  \begin{description}
+    \item[Stable Matching Problem] David Gale \& Lloyd Shapley, 1962
+  \end{description}
+
+  \vspace{\baselineskip}
+  Cómo diseñar el proces de admición de alumnos de la Universidad o de
+  asignación de personal en una \textit{empresa}
+  (p.ej. prácticas en empresa) ...
+
+  \vspace{\baselineskip}
+  ... teniendo en cuenta el orden de preferencia de las empresas y de los
+  alumnos.
+\end{frame}
+
+\begin{frame}[c]{Problema de asignaciones estables}
+  \begin{description}
+    \item[Objetivo] Dado el conjunto de preferencia de las empresas y de los
+      alumnos en prácticas, diseñar un proceso de asignación que conduzca a una
+      \textbf{asignación estable}
+    \vspace{\baselineskip}
+    \item[Par inestable] El alumno $X$ y la empresa $Y$ son un par inestable si:
+      \begin{itemize}
+        \item $X$ prefiere $Y$ en vez de la empres a la que ha sido asignado.
+        \item $Y$ prefiere a $X$ en lugar del alumno que le ha asignado.
+      \end{itemize}
+  \end{description}
+\end{frame}
+
+\begin{frame}[c]{Problema de asignaciones estables}
+  \begin{description}
+    \item[Asignación estable] Una asignación sin pares inestables.
+  \end{description}
+
+  \vspace{\baselineskip}
+  \begin{block}{¿Por qué es deseable una asignación estable?}
+    Porque se reduce la insatisfacción de empresas y alumnos, además de eliminar
+    la necesidad de realizar resignaciones (nadie tiene incentivos para cambiar
+    su asignación).
+  \end{block}
+\end{frame}
+
+\begin{frame}[c]{En otros términos}
+  \begin{block}{Problema del matrimonio estable}
+    Es el problema de encontrar un emparejamiento estable entre dos conjuntos
+    de elementos de igual tamaño dado un orden de preferencias para cada
+    elemento. Una coincidencia es una biyección de los elementos de un
+    conjunto a los elementos del otro conjunto.
+  \end{block}
+\end{frame}
+
+\begin{frame}[c]{Problema del matrimonio estable}
+  Dados $n$ hombre y $m$ mujeres, encontrar un emparejamiento estable de
+  hombres con mujeres.
+
+  \vspace{\baselineskip}
+  Cada persona "evalúa" a las personas de sexo opuesto.
+  \begin{itemize}
+    \item Los hombres ordenan a las mujeres según sus preferencias.
+    \item Las mujeres ordenan a los hombres según sus preferencias.
+  \end{itemize}
+\end{frame}
+
+\begin{frame}[c]{Problema del matrimonio estable}
+  \begin{block}{Emparejamiento perfecto}
+    Todo el mundo emparejado de forma "monógama".
+    \begin{itemize}
+      \item Cada hombre emparejado con una mujer.
+      \item Cada mujer emparejado con un hombre.
+    \end{itemize}
+  \end{block}
+\end{frame}
+
+\begin{frame}[c]{Problema del matrimonio estable}
+  \begin{block}{Estabilidad}
+    Ninguna pareja participante tiene incentivos para romper la asignación.
+    \begin{itemize}
+      \item Una pareja no emparejada $h-m$ si tanto el hombre $h$ como la mujer
+        $m$ se prefieren mutuamente antes que a sus parejas actuales.
+      \item La pareja inestable podría "mejorar" engañando a sus actuales
+        parejas.
+    \end{itemize}
+  \end{block}
+\end{frame}
