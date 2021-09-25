@@ -1,0 +1,57 @@
+% ex: ts=2 sw=2 sts=2 et filetype=tex
+% SPDX-License-Identifier: CC-BY-SA-4.0
+
+\section{Comparación de algoritmos}
+
+\begin{frame}[c]{Comparación de algoritmos}
+  A menudo dispondremos de más de un algoritmo para
+  resolver un problema dado, ¿con cuál nos quedamos?
+
+  \vspace{\baselineskip}
+  \textbf{Uso de recursos}
+
+  \vspace{\baselineskip}
+  \begin{itemize}
+    \item Computacionales:
+          \begin{itemize}
+            \item Tiempo de ejecución
+            \item Espacio de memoria
+          \end{itemize}
+    \item No computacionales:
+          \begin{itemize}
+            \item Esfuerzo de desarrollo (análisis, diseño e implementación)
+          \end{itemize}
+  \end{itemize}
+\end{frame}
+
+\begin{frame}[c]{Factores que influyen en el uso de recursos}
+  \begin{itemize}
+    \item Recursos computaciones:
+          \begin{itemize}
+            \item Diseño del algoritmo
+            \item Complejidad del problema (p.ej. tamaño de las entradas)
+            \item Hardware (arquitectura, MHz, MBs...)
+            \item Calidad del código
+            \item Calidad del compilador (optimizaciones)
+          \end{itemize}
+    \item Recursos no computaciones:
+          \begin{itemize}
+            \item Complejidad del algoritmo
+            \item Disponibilidad de biblioteca reutilizables
+          \end{itemize}
+  \end{itemize}
+\end{frame}
+
+\section{Principio de invarianza}
+
+\begin{frame}[c]{Principio de invarianza}
+  \begin{itemize}
+    \item Dos implementaciones de un mismo algoritmo no deferirán más
+      que en una constante multiplicativa.
+    \item Si $t_1(n)$ y $t_2(n)$ son los tiempos de dos implementaciones
+      de un mismo algoritmo, se pude comprobar que:
+
+      \vspace{\baselineskip}
+      $\exists c,d \in \mathbb{R}, t_1(n) \leq ct_2()n); t_2(n) \leq dt_1(n)$
+  \end{itemize}
+\end{frame}
