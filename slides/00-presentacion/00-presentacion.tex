@@ -1,0 +1,63 @@
+% ex: ts=2 sw=2 sts=2 et filetype=tex
+% SPDX-License-Identifier: CC-BY-SA-4.0
+\documentclass[aspectratio=169]{beamer}
+
+\usetheme{Boadilla}
+
+\setbeamertemplate{navigation symbols}{}
+
+\graphicspath{{../img/}{../styles/tsj/}}
+\usepackage{../styles/tsj/beamercolorthemetsj}
+%\usepackage{../styles/beamercolorthemedracula}
+
+\usepackage[utf8]{inputenc}
+\usepackage{graphicx} % Allows including images
+
+\title{Análisis y Diseño de Algoritmos}
+
+\author{Miguel Bernal Marin}
+\institute[TSJ Zapopan]
+{
+ Instituto Tecnológico\\
+ José Mario Molina\\
+ Pasquel y Henríquez\\
+\medskip
+\textit{miguel.bernal@zapopan.tecmm.edu.mx}
+}
+\date{
+  7 de septiembre de 2024
+}
+
+\logo{\includegraphics[height=1.5cm]{tsj.png}}
+
+\titlegraphic{
+    \includegraphics[width=4cm]{tsj.png}
+}
+%------------------------------------------------------------
+%The next block of commands puts the table of contents at the 
+%beginning of each section and highlights the current section:
+\AtBeginSection[]
+{
+  \begin{frame}
+    \frametitle{Contenido}
+    \tableofcontents[currentsection]
+  \end{frame}
+}
+%------------------------------------------------------------
+
+\newcommand{\nologo}{\setbeamertemplate{logo}{}} % command to set the logo to nothing
+\newcommand{\pausa}{\pause} % Para usar una pausa en las presentaciones
+%\newcommand{\pausa}{}      % Para que NO salgan las pausas
+
+\begin{document}
+
+{
+\nologo
+\begin{frame}
+    \titlepage
+\end{frame}
+}
+
+\input{contenido.tex}
+
+\end{document}
