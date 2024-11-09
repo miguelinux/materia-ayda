@@ -21,6 +21,14 @@
             llevarse a cabo con fidelidad, dará como resultado que se realice
             la tarea para la que se ha diseñado en un tiempo finito.
     \end{itemize}
+    \pausa
+    \begin{center}
+    \begin{tikzpicture}[node distance = 2cm]
+      \node (problema) [rectangle, fill=none]{Problema};
+      \node (flecha) [single arrow, minimum height=1.5cm, right of=problema, fill=cyan!50]{};
+      \node (solucion) [rectangle, fill=none, right of=flecha] {Solución};
+    \end{tikzpicture}
+    \end{center}
   \end{block}
 \end{frame}
 
@@ -43,3 +51,118 @@
   \end{description}
 \end{frame}
 
+\begin{frame}[c]{Análisis de algoritmos}
+  \begin{itemize}
+    \item El análisis de algoritmos pretende descubrir si estos son o no
+      eficaces.
+    \pausa
+    \item Establece una comparación entre los mismos con el fin de saber
+      cuál es el más eficiente.
+    \pausa
+    \item No importa que cada uno de los algoritmos de estudio sirva para
+      resolver el mismo problema.
+  \end{itemize}
+\end{frame}
+
+\begin{frame}[c]{Eficiencia de los algoritmos}
+
+  Para saber qué tan eficiente es un algoritmo hacemos las preguntas:
+  \vspace{\baselineskip}
+
+  \pausa
+  \begin{itemize}
+    \item ¿Cuánto tiempo ocupa?
+    \pausa
+    \item ¿Cuánta memoria ocupa?
+  \end{itemize}
+  \pausa
+  \begin{block}{Nota:}
+    El tiempo que requiere un algoritmo para resolver un problema está
+    en función del tamaño $n$ del conjunto de datos para procesar: $T(n)$
+  \end{block}
+\end{frame}
+
+\begin{frame}[c]{Tipos de estudio del tiempo}
+  \begin{description}
+    \item[A priori] se obtiene una medida teórica, es decir, una función
+      que acota (por arriba o por abajo) el tiempo de ejecución del
+      algoritmo para unos valores de entrada dados.
+    \pausa
+    \item[A posteriori] se obtiene una medida real, es decir, el tiempo
+      de ejecución del algoritmo para unos valores de entrada dados en
+      determinada computadora.
+  \end{description}
+  \pausa
+  \begin{alertblock}{Nota:}
+    El tiempo de ejecución $T(n)$ de un algoritmo para una entrada de
+    tamaño $n$ no debe medirse en segundos, milisegundos, etc.
+  \end{alertblock}
+\end{frame}
+
+
+\section{La eficiencia de un algoritmo}
+
+\begin{frame}[c]{Principio de invarianza}
+  \begin{block}{Principio de invarianza}
+    Dado un algoritmo y dos implementaciones suyas $I_1$ e $I_2$, que tardan
+    $T_1(n)$ y $T_2(n)$ respectivamente, el \textbf{Principio de invarianza}
+    afirma que existe una constante real $c > 0$ y un número natural $n_0$
+    tales que para todo $n \geq n_0$ se verifica que:
+    \[
+      T_1(n) \leq cT_2(n)
+    \]
+  \end{block}
+\end{frame}
+
+\begin{frame}[c]{En otras palabras}
+  \begin{itemize}
+    \item El tiempo de ejecución de un algoritmo es asintóticamente de
+      \textit{del orden de } $T(n)$ si existen dos constantes reales
+      $c$ y $n_0$ y una implementación $I$ del algoritmo tales que el
+      problema se resuelve en menos de $cT(n)$, para toda $n > n_0$.
+  \end{itemize}
+\end{frame}
+
+\begin{frame}[c]{Influye más el tipo de función}
+  \begin{table}[]
+  \begin{tabular}{rrcl}
+    \textbf{n} &  \textbf{Algoritmo 1} &   &  \textbf{Algoritmo 2} \\
+       & $T_1(n) = 10^6n^2$  &   & $T_2(n) = 5n^3$  \\ 
+         2 & $10^6 \times 4 = 4'000,000$ & > & $5 \times 8 = 40$ \\
+       200 & $10^6 \times 40,000 = 4 \times 10^{10}$ & > & $5 \times 8 \times 10^6 = 4 \times 10^7$  \\
+       200,000 & $10^6 \times 4 \times 10^{10} = 4 \times 10^{16}$ & = & $5 \times 8 \times 10^{15} = 4 \times 10^{16}$  \\
+       2'000,000 & $10^6 \times 4 \times 10^{12} = 4 \times 10^{18}$ & = & $5 \times 8 \times 10^{18} = 4 \times 10^{19}$  \\
+  \end{tabular}
+  \end{table}
+
+  \vspace{\baselineskip}
+  A partir de cierto valor de $n$, la función cúbica es siempre mayor a
+  pesar de que la constante es mucho menor a ésta.
+\end{frame}
+
+
+\section{El tiempo de ejecución $T(n)$ de un algoritmo}
+
+\begin{frame}[c]{El tiempo de ejecución}
+  Para medir $T(n)$ usamos el número de operaciones elementales. Una operación
+  elemental puede ser:
+  \pausa
+  \begin{itemize}
+    \item Operación aritmética.
+    \pausa
+    \item Asignación a una variable.
+    \pausa
+    \item Llamada a una función.
+    \pausa
+    \item Retorno de una función.
+    \pausa
+    \item Comparaciones lógicas (con salto).
+    \pausa
+    \item Acceso a una estructura (arreglo, matriz, lista ligada…).
+  \end{itemize}
+
+  \vspace{\baselineskip}
+  Se le llama \textbf{tiempo de ejecución}, no al tiempo físico, sino al
+  número de operaciones elementales que se llevan a cabo en el algoritmo.
+
+\end{frame}
